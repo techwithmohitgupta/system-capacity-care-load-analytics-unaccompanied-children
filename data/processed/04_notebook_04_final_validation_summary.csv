@@ -1,0 +1,11 @@
+Output File,Rows,Columns,Missing Values,Duplicate Rows,Ready to Save
+04_daily_care_load_trend.csv,720,21,0,0,True
+04_weekly_care_load_trend.csv,154,19,0,0,True
+04_monthly_care_load_trend.csv,36,27,0,0,True
+04_yearly_calendar_period_comparison.csv,3,27,0,0,True
+04_timeline_executive_summary.csv,3,14,0,0,True
+04_timeline_shift_summary.csv,3,13,0,0,True
+04_final_timeline_comparison_summary.csv,3,18,0,0,True
+04_daily_high_load_trend_dataset.csv,720,27,0,0,True
+04_sustained_high_load_period_summary.csv,2,11,0,0,True
+04_step_4g_validation_summary.csv,13,2,0,0,True

@@ -1,0 +1,6 @@
+Dataset Layer,Object Name,Rows,Columns,Missing Values,Duplicate Rows
+Final Notebook 06 Base Dataset,df_notebook_06,720,107,331,0
+Combined Pressure Trend Dataset,df_combined_pressure_trend,925,34,0,0
+Trend Direction Dataset,df_trend_direction,925,49,45,0
+Final KPI Summary Layer,df_step_6d_kpi_base,720,107,331,0
+Dashboard KPI Cards Layer,df_kpi_dashboard_cards,8,4,0,0

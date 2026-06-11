@@ -1,0 +1,11 @@
+Step 6D Check,Result
+Input Dataset Source,df_notebook_06
+Rows Checked,720
+Columns Checked,107
+Missing Required Input Columns,0
+Date Parse Errors,0
+Duplicate Dates,0
+Chronological Order,True
+Final KPI Count,5
+Dashboard KPI Card Count,8
+Rows Deleted or Modified,0

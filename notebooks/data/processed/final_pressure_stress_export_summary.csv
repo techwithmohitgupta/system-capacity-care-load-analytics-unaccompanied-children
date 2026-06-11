@@ -1,0 +1,16 @@
+Step 5G Export Check,Result
+Input Dataset Source,df_pressure_final
+Exported Dataset Rows,720
+Exported Dataset Columns,107
+Date Parse Errors,0
+Duplicate Dates,0
+Chronological Order,True
+Missing Required Export Columns,0
+Missing Values in Required Export Columns,0
+Final Pressure Stress Levels,5
+Operational Response Categories,5
+Primary Pressure Drivers,6
+Full Dataset Export Path,data\processed\final_pressure_stress_classification_dataset.csv
+Stress Level Distribution Export Path,data\processed\final_pressure_stress_level_distribution.csv
+Operational Response Distribution Export Path,data\processed\operational_response_category_distribution.csv
+Primary Pressure Driver Distribution Export Path,data\processed\primary_pressure_driver_distribution.csv

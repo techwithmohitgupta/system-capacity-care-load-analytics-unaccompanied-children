@@ -1,0 +1,4 @@
+Timeline Period,Year,Reporting Days,Avg System Load,Peak System Load,Total Net Intake,Avg Net Daily Intake,Net Intake per Reporting Day,Avg Care Load Growth Rate (%),Backlog Pressure Days,Backlog Pressure Days (%),Max Backlog Severity Score,Logical Anomaly Days,Logical Anomaly Days (%)
+Early Timeline,2023,230,8846.54,11762,-30120,-130.96,-130.96,0.26,12,5.22,1,43,18.7
+Middle Timeline,2024,251,7319.86,10994,863,3.44,3.44,-0.2,148,58.96,3,31,12.35
+Late Timeline,2025,239,2575.74,6471,-2955,-12.36,-12.36,-0.39,78,32.64,3,12,5.02

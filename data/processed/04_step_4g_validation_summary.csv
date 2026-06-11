@@ -1,0 +1,14 @@
+Step 4G Check,Result
+Input Dataset Source,df_daily_trend
+Rows Checked,720
+Columns Before Step 4G,21
+Columns After Step 4G,27
+75th Percentile System Load,8249.5
+90th Percentile System Load,9920.9
+95th Percentile System Load,10964.3
+High or Critical Load Days,72
+Sustained High-Load Minimum Days,3
+Sustained High-Load Days,71
+Sustained High-Load Periods,2
+Missing Values in New Load Level Column,0
+Rows Deleted or Modified,0

@@ -1,0 +1,14 @@
+Quality Check,Result
+Rows Checked,720
+Columns Before Flags,6
+Columns After Flags,9
+Missing Values,0
+Duplicate Full Rows,0
+Duplicate Reporting Dates,0
+Negative Values,0
+Date Column Type,datetime64[ns]
+All Count Columns Integer Type,True
+Transfer > CBP Custody Violations,86
+Discharge > HHS Care Violations,0
+Total Logical Anomaly Rows,86
+Rows Deleted or Modified,0

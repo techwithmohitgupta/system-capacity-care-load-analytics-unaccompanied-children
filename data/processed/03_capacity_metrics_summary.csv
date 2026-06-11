@@ -1,0 +1,16 @@
+Metric Summary Check,Result
+Rows in Final Metrics Dataset,720.0
+Columns in Final Metrics Dataset,18.0
+Notebook 03 Metric Columns Created,9.0
+Total System Load Minimum,2002.0
+Total System Load Maximum,11762.0
+Net Daily Intake Minimum,-465.0
+Net Daily Intake Maximum,206.0
+Care Load Growth Rate Minimum (%),-11.6
+Care Load Growth Rate Maximum (%),8.34
+Positive Net Intake Days,238.0
+Maximum Consecutive Positive Net Intake Days,12.0
+Unique Backlog Indicator Labels,4.0
+Maximum Backlog Severity Score,3.0
+Logical Anomaly Rows Preserved,86.0
+Rows Deleted or Modified,0.0

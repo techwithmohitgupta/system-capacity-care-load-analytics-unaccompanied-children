@@ -1,0 +1,20 @@
+Notebook 06 Final Summary Metric,Result
+Notebook Name,06_system_pressure_trend_analysis_executive_insights
+Final Base Dataset Rows,720
+Final Base Dataset Columns,107
+Analysis Start Date,2023-01-12 00:00:00
+Analysis End Date,2025-12-21 00:00:00
+Combined Trend Output Rows,925
+Trend Direction Output Rows,925
+Final KPI Summary Rows,720
+Dashboard KPI Cards,8
+Normal Operating Pressure Days,128
+Early Pressure Watch Days,196
+Moderate System Stress Days,180
+High System Stress Days,138
+Critical System Pressure Days,78
+Average Final Pressure Score,2.05
+Maximum Final Pressure Score,6.07
+Export Files Created,7
+Notebook 06 Completion Status,Completed Successfully
+Ready for Notebook 07,Yes

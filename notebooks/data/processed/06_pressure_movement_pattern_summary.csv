@@ -1,0 +1,32 @@
+trend_period_type,pressure_movement_pattern,record_count,record_percentage
+Daily,Baseline Period,1,0.14
+Daily,Broad Pressure Build-up,76,10.56
+Daily,Broad Pressure Relief,53,7.36
+Daily,Load-Led Pressure Increase,43,5.97
+Daily,Pressure Cooling,229,31.81
+Daily,Stable Pressure Movement,155,21.53
+Daily,Stress-Led Pressure Increase,163,22.64
+Monthly,Baseline Period,1,2.78
+Monthly,Broad Pressure Build-up,6,16.67
+Monthly,Broad Pressure Relief,8,22.22
+Monthly,Load-Led Pressure Increase,4,11.11
+Monthly,Pressure Build-up,2,5.56
+Monthly,Pressure Cooling,5,13.89
+Monthly,Stable Pressure Movement,4,11.11
+Monthly,Stress-Led Pressure Increase,6,16.67
+Quarterly,Baseline Period,1,8.33
+Quarterly,Broad Pressure Build-up,2,16.67
+Quarterly,Broad Pressure Relief,6,50.0
+Quarterly,Load-Led Pressure Increase,1,8.33
+Quarterly,Pressure Cooling,1,8.33
+Quarterly,Stress-Led Pressure Increase,1,8.33
+Weekly,Baseline Period,1,0.65
+Weekly,Broad Pressure Build-up,20,12.99
+Weekly,Broad Pressure Relief,20,12.99
+Weekly,Load-Led Pressure Increase,9,5.84
+Weekly,Pressure Build-up,2,1.3
+Weekly,Pressure Cooling,41,26.62
+Weekly,Stable Pressure Movement,29,18.83
+Weekly,Stress-Led Pressure Increase,32,20.78
+Yearly,Baseline Period,1,33.33
+Yearly,Broad Pressure Relief,2,66.67

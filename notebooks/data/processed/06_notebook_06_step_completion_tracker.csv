@@ -1,0 +1,7 @@
+Notebook Step,Step Description,Primary Output Created,Status
+Step 6A,"Notebook 06 setup, library imports, and final dataset loading",df_notebook_06,Completed
+Step 6B,Create time-based pressure trend aggregations,df_combined_pressure_trend,Completed
+Step 6C,Analyze pressure trend direction and movement patterns,df_trend_direction,Completed
+Step 6D,Build final KPI summary layer,df_step_6d_kpi_base and df_kpi_dashboard_cards,Completed
+Step 6E,Export final KPI summary and dashboard-ready analytical outputs,Final exported CSV analytical outputs,Completed
+Step 6F,Final Notebook 06 completion summary and validation wrap-up,Notebook 06 final validation summary,Completed

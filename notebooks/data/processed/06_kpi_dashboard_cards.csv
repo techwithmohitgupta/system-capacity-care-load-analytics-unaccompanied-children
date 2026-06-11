@@ -1,0 +1,9 @@
+Card Title,Card Value,Card Unit,Card Context
+Current Children Under Care,2502.0,Children,Latest total system load.
+Average Net Intake Pressure,-44.74,Children / Day,Average inflow-outflow imbalance.
+Care Load Volatility Index,1.89,Growth Std Dev,Volatility in care load growth.
+Backlog Accumulation Rate,13.33,%,Share of days with sustained backlog pressure.
+Discharge Offset Ratio,1.35,Ratio,Discharges compared with transfers into HHS.
+Critical Pressure Days,78.0,Days,Days requiring immediate escalation.
+High Stress Days,138.0,Days,Days requiring priority monitoring.
+Average Final Pressure Score,2.05,Score,Overall pressure score average.

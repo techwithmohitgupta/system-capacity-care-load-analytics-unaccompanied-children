@@ -1,0 +1,4 @@
+Timeline Period,Year,Avg System Load,Peak System Load,Total Net Intake,Backlog Pressure Days,Logical Anomaly Days,Avg System Load Change vs Early,Avg System Load Change % vs Early,Peak System Load Change vs Early,Net Intake Change vs Early,Backlog Pressure Days Change vs Early,Logical Anomaly Days Change vs Early
+Early Timeline,2023,8846.54,11762,-30120,12,43,0.0,0.0,0,0,0,0
+Middle Timeline,2024,7319.86,10994,863,148,31,-1526.68,-17.26,-768,30983,136,-12
+Late Timeline,2025,2575.74,6471,-2955,78,12,-6270.8,-70.88,-5291,27165,66,-31

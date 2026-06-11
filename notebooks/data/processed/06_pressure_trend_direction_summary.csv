@@ -1,0 +1,18 @@
+trend_period_type,pressure_trend_direction,record_count,record_percentage
+Daily,No Previous Period,1,0.14
+Daily,Pressure Decreasing,283,39.31
+Daily,Pressure Increasing,230,31.94
+Daily,Pressure Stable,206,28.61
+Monthly,No Previous Period,1,2.78
+Monthly,Pressure Decreasing,16,44.44
+Monthly,Pressure Increasing,12,33.33
+Monthly,Pressure Stable,7,19.44
+Quarterly,No Previous Period,1,8.33
+Quarterly,Pressure Decreasing,7,58.33
+Quarterly,Pressure Increasing,4,33.33
+Weekly,No Previous Period,1,0.65
+Weekly,Pressure Decreasing,66,42.86
+Weekly,Pressure Increasing,47,30.52
+Weekly,Pressure Stable,40,25.97
+Yearly,No Previous Period,1,33.33
+Yearly,Pressure Decreasing,2,66.67

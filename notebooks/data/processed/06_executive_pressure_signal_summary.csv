@@ -1,0 +1,22 @@
+trend_period_type,executive_pressure_signal,record_count,record_percentage
+Daily,Baseline,1,0.14
+Daily,Improving,282,39.17
+Daily,Monitor Increase,43,5.97
+Daily,Stable,155,21.53
+Daily,Watch Closely,239,33.19
+Monthly,Baseline,1,2.78
+Monthly,Improving,13,36.11
+Monthly,Monitor Increase,6,16.67
+Monthly,Stable,4,11.11
+Monthly,Watch Closely,12,33.33
+Quarterly,Baseline,1,8.33
+Quarterly,Improving,7,58.33
+Quarterly,Monitor Increase,1,8.33
+Quarterly,Watch Closely,3,25.0
+Weekly,Baseline,1,0.65
+Weekly,Improving,61,39.61
+Weekly,Monitor Increase,11,7.14
+Weekly,Stable,29,18.83
+Weekly,Watch Closely,52,33.77
+Yearly,Baseline,1,33.33
+Yearly,Improving,2,66.67

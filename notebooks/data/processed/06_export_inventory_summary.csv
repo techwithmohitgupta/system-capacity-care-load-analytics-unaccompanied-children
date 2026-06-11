@@ -1,0 +1,8 @@
+Output Layer,File Name,Business Purpose,Primary Use
+Final KPI Summary,06_final_kpi_summary.csv,Stores final project KPIs with business interpretation and dashboard module mapping.,Notebook 07 insights and dashboard KPI summary cards
+KPI Dashboard Cards,06_kpi_dashboard_cards.csv,Stores compact KPI card values for dashboard-ready executive display.,Streamlit dashboard KPI section
+Trend Direction Dataset,06_trend_direction_dataset.csv,"Stores daily, weekly, monthly, quarterly, and yearly pressure trend movement features.","Trend analysis, visualizations, and executive reporting"
+Pressure Trend Direction Summary,06_pressure_trend_direction_summary.csv,"Summarizes whether system pressure is increasing, decreasing, stable, or baseline by period type.",Notebook 07 trend interpretation
+Pressure Movement Pattern Summary,06_pressure_movement_pattern_summary.csv,"Summarizes pressure build-up, relief, cooling, stable movement, and stress-led increase patterns.",Operational movement pattern insights
+Executive Pressure Signal Summary,06_executive_pressure_signal_summary.csv,"Groups pressure signals into executive-friendly categories such as Improving, Stable, Watch Closely, and Monitor Increase.",Leadership-level pressure monitoring summary
+Step 6D KPI Validation Summary,06_step_6d_kpi_validation_summary.csv,Stores validation checks for final KPI creation.,Project audit and notebook validation trail

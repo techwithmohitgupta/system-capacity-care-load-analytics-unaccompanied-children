@@ -5,8 +5,8 @@
 # ============================================================
 
 from __future__ import annotations
-
 from pathlib import Path
+from PIL import Image, ImageChops
 from datetime import date
 from typing import Any
 

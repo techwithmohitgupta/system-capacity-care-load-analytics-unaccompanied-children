@@ -16,7 +16,6 @@ import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 
-
 # ============================================================
 # 1. Streamlit Page Configuration
 # ============================================================
@@ -5165,3 +5164,54 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    
+    
+# -------------------------
+# FOOTER SECTION
+# -------------------------
+st.markdown("---")
+
+st.markdown("### 📌 Project Information & Credits")
+
+c1, c2, c3 = st.columns(3)
+
+with c1:
+    st.markdown(
+        """
+**👨‍💻 Developed by:** Mohit Gupta  
+**🎯 Role:** Data Analyst Intern
+        """
+    )
+
+with c2:
+    st.markdown(
+        """
+**📊 Project:** System Capacity & Care Load Analytics for Unaccompanied Children
+**🏢 Organization:** Unified Mentor Pvt. Ltd.
+        """
+    )
+
+with c3:
+    st.markdown(
+        """
+**👨‍🏫 Mentor:** Saiprasad Kagne  
+**📅 Year:** 2026
+        """
+    )
+
+st.markdown(
+    """
+<div style="
+    text-align: center;
+    margin-top: 10px;
+    color: #6b563d;
+    font-size: 14px;
+    font-weight: 600;
+">
+    💡 Built using Python, Pandas, Plotly & Streamlit
+</div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown("</div>", unsafe_allow_html=True)

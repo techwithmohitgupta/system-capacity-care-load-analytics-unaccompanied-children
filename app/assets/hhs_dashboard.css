@@ -7200,3 +7200,25 @@ section.main div[data-testid="stMarkdownContainer"] h2:has(a[href="#key-performa
         font-size: 24px !important;
     }
 }
+
+  /* =======================================================
+     13. FOOTER / PROJECT CREDITS
+     ======================================================= */
+
+  div[data-testid="stMain"] h3:has(+ div),
+  div[data-testid="stMain"] div[data-testid="stMarkdownContainer"] h3 {
+    color: var(--ecb-navy-950) !important;
+  }
+
+  .block-container > div:last-child {
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Footer columns become premium credit cards */
+  .block-container > div:last-child div[data-testid="stHorizontalBlock"]:last-of-type > div[data-testid="column"] {
+    background: rgba(255, 255, 255, 0.76) !important;
+    border: 1px solid rgba(16, 42, 76, 0.10) !important;
+    border-radius: 18px !important;
+    padding: 1rem 1.1rem !important;
+    box-shadow: 0 10px 24px rgba(16, 42, 76, 0.055) !important;
+  }

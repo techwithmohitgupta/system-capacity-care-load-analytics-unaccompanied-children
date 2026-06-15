@@ -3525,10 +3525,10 @@ def render_module1_command_header(intelligence: dict[str, Any]) -> None:
     html = f"""
     <section class="hhs-m1-command-shell hhs-m1-status-{severity}">
         <div class="hhs-m1-command-header">
-            <div class="hhs-m1-command-eyebrow">Module 1 · Fully Dynamic Healthcare Operations Command Center</div>
+            <div class="hhs-m1-command-eyebrow">Module 1 · Fully Dynamic Healthcare Operations Analytics</div>
             <div class="hhs-m1-command-topline">
                 <div class="hhs-m1-command-title-block">
-                    <h2 class="hhs-m1-command-title">System Load Overview Command Center</h2>
+                    <h2 class="hhs-m1-command-title">System Load Overview</h2>
                     <p class="hhs-m1-command-subtitle">Filter-aware care-load intelligence for CBP custody, HHS care, intake pressure, discharge relief, capacity range, risk stability, and executive action.</p>
                 </div>
                 <div class="hhs-m1-status-badge hhs-m1-status-badge-{severity}">{status_label}</div>
@@ -4919,7 +4919,7 @@ def render_module_2_command_center(
     render_module_command_header(
         "m2",
         "2",
-        "CBP vs HHS Load Comparison Command Center",
+        "CBP vs HHS Load Comparison Analysis",
         "Filter-aware responsibility-split intelligence for CBP custody, HHS care concentration, handoff balance, and downstream care-load planning.",
         intelligence,
     )
@@ -4958,7 +4958,7 @@ def render_module_3_command_center(
     render_module_command_header(
         "m3",
         "3",
-        "Net Intake & Backlog Pressure Command Center",
+        "Net Intake & Backlog Pressure Analysis",
         "Flow-balance intelligence for transfers into HHS, discharges from HHS, net intake pressure, relief periods, and backlog accumulation.",
         intelligence,
     )
@@ -5000,7 +5000,7 @@ def render_module_4_command_center(
     render_module_command_header(
         "m4",
         "4",
-        "KPI Executive Summary Command Center",
+        "KPI Executive Summary and Health Ranking",
         "Executive interpretation of the five guideline-required KPIs, pressure distribution, primary drivers, and operational decision priorities.",
         intelligence,
     )

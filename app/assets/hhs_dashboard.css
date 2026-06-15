@@ -7317,3 +7317,38 @@ section.main div[data-testid="stMarkdownContainer"] h2:has(a[href="#key-performa
     margin-top: 0.4rem !important;
     margin-bottom: 1rem !important;
 }
+
+/* ============================================================
+   Plotly Label Visibility Fix — Global Chart Safety Patch
+   Fixes clipped axis labels, legends, annotations and outside text
+   ============================================================ */
+
+[data-testid="stPlotlyChart"] {
+    overflow: visible !important;
+    padding: 20px !important;
+}
+
+[data-testid="stPlotlyChart"] > div,
+[data-testid="stPlotlyChart"] .js-plotly-plot,
+[data-testid="stPlotlyChart"] .plot-container,
+[data-testid="stPlotlyChart"] .svg-container {
+    overflow: visible !important;
+}
+
+[data-testid="stPlotlyChart"] svg {
+    overflow: visible !important;
+}
+
+/* Give every chart a little breathing room on smaller screens */
+@media (max-width: 1200px) {
+    [data-testid="stPlotlyChart"] {
+        padding: 18px 16px 22px !important;
+    }
+}
+
+@media (max-width: 760px) {
+    [data-testid="stPlotlyChart"] {
+        padding: 16px 12px 24px !important;
+        border-radius: 22px !important;
+    }
+}

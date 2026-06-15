@@ -1694,7 +1694,7 @@ def apply_plotly_layout(
     yaxis_title: str | None = None,
     xaxis_title: str | None = None,
 ) -> go.Figure:
-    """Apply a consistent healthcare analytics Plotly layout."""
+    """Apply a consistent healthcare analytics Plotly layout with label safety."""
     fig.update_layout(
         title={
             "text": title,
@@ -1707,20 +1707,24 @@ def apply_plotly_layout(
         plot_bgcolor="rgba(255,255,255,0)",
         font={"family": "Inter, Segoe UI, sans-serif", "color": COLORS["navy"], "size": 12},
         hovermode="x unified",
-        margin={"l": 40, "r": 28, "t": 72, "b": 46},
+        margin={"l": 86, "r": 110, "t": 82, "b": 112},
         legend={
             "orientation": "h",
-            "yanchor": "bottom",
-            "y": 1.02,
-            "xanchor": "right",
-            "x": 1,
-            "font": {"size": 11},
+            "yanchor": "top",
+            "y": -0.22,
+            "xanchor": "left",
+            "x": 0,
+            "font": {"size": 10, "color": COLORS["navy"]},
+            "bgcolor": "rgba(255,255,255,0)",
         },
         xaxis={
             "title": xaxis_title,
             "showgrid": False,
             "linecolor": COLORS["slate_light"],
             "tickfont": {"size": 11, "color": COLORS["slate"]},
+            "automargin": True,
+            "title_standoff": 16,
+            "ticklabeloverflow": "allow",
         },
         yaxis={
             "title": yaxis_title,
@@ -1728,8 +1732,66 @@ def apply_plotly_layout(
             "zerolinecolor": "rgba(100, 116, 139, 0.38)",
             "linecolor": COLORS["slate_light"],
             "tickfont": {"size": 11, "color": COLORS["slate"]},
+            "automargin": True,
+            "title_standoff": 16,
+            "ticklabeloverflow": "allow",
         },
     )
+
+    return apply_plotly_label_safety(
+        fig,
+        left=86,
+        right=110,
+        top=82,
+        bottom=112,
+        legend_bottom=True,
+        legend_y=-0.22,
+    )
+
+def apply_plotly_label_safety(
+    fig: go.Figure,
+    *,
+    left: int = 86,
+    right: int = 110,
+    top: int = 82,
+    bottom: int = 112,
+    legend_bottom: bool = True,
+    legend_y: float = -0.22,
+) -> go.Figure:
+    """Prevent Plotly labels, legends, axis titles, and outside text from being clipped."""
+    fig.update_layout(
+        autosize=True,
+        margin={"l": left, "r": right, "t": top, "b": bottom},
+    )
+
+    fig.update_xaxes(
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
+    )
+
+    fig.update_yaxes(
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
+    )
+
+    fig.update_traces(cliponaxis=False, selector={"type": "bar"})
+    fig.update_traces(cliponaxis=False, selector={"type": "scatter"})
+
+    if legend_bottom:
+        fig.update_layout(
+            legend={
+                "orientation": "h",
+                "yanchor": "top",
+                "y": legend_y,
+                "xanchor": "left",
+                "x": 0,
+                "font": {"size": 10, "color": COLORS["navy"]},
+                "bgcolor": "rgba(255,255,255,0)",
+            }
+        )
+
     return fig
 
 
@@ -1843,7 +1905,9 @@ def apply_module1_chart_layout(
     show_legend: bool = True,
     legend_bottom: bool = True,
 ) -> go.Figure:
-    """Apply a Module 1-specific Plotly layout that prevents title, legend, and annotation collisions."""
+    """Apply a Module 1-specific Plotly layout that prevents title, legend, and label collisions."""
+    bottom_margin = 126 if show_legend and legend_bottom else 92
+
     fig.update_layout(
         title={
             "text": title,
@@ -1861,19 +1925,20 @@ def apply_module1_chart_layout(
         plot_bgcolor="rgba(255,255,255,0)",
         hovermode="x unified",
         margin={
-            "l": 58,
-            "r": 72,
-            "t": 72,
-            "b": 86 if show_legend and legend_bottom else 54,
+            "l": 86,
+            "r": 112,
+            "t": 84,
+            "b": bottom_margin,
         },
         legend={
             "orientation": "h",
             "yanchor": "top",
-            "y": -0.16 if legend_bottom else 1.08,
+            "y": -0.23 if legend_bottom else 1.08,
             "xanchor": "left",
             "x": 0,
             "font": {"size": 10, "color": COLORS["navy"]},
             "itemwidth": 30,
+            "bgcolor": "rgba(255,255,255,0)",
         },
         showlegend=show_legend,
         font={
@@ -1895,6 +1960,9 @@ def apply_module1_chart_layout(
         spikesnap="cursor",
         spikecolor="rgba(100, 116, 139, 0.35)",
         spikethickness=1,
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
     )
 
     fig.update_yaxes(
@@ -1908,9 +1976,20 @@ def apply_module1_chart_layout(
         spikesnap="cursor",
         spikecolor="rgba(100, 116, 139, 0.28)",
         spikethickness=1,
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
     )
 
-    return fig
+    return apply_plotly_label_safety(
+        fig,
+        left=86,
+        right=112,
+        top=84,
+        bottom=bottom_margin,
+        legend_bottom=show_legend and legend_bottom,
+        legend_y=-0.23,
+    )
 
 def add_module1_peak_and_latest_markers(
     fig: go.Figure,
@@ -4061,7 +4140,9 @@ def apply_command_center_chart_layout(
     show_legend: bool = True,
     legend_bottom: bool = True,
 ) -> go.Figure:
-    """Apply a safe module 2–4 chart layout with extra spacing and verified Plotly properties."""
+    """Apply a safe module 2–4 chart layout with extra label, legend, and axis spacing."""
+    bottom_margin = 118 if show_legend and legend_bottom else 92
+
     fig.update_layout(
         title={
             "text": title,
@@ -4078,14 +4159,15 @@ def apply_command_center_chart_layout(
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(255,255,255,0)",
         hovermode="x unified",
-        margin={"l": 60, "r": 58, "t": 76, "b": 82 if show_legend and legend_bottom else 58},
+        margin={"l": 88, "r": 118, "t": 84, "b": bottom_margin},
         legend={
             "orientation": "h",
             "yanchor": "top",
-            "y": -0.16 if legend_bottom else 1.08,
+            "y": -0.22 if legend_bottom else 1.08,
             "xanchor": "left",
             "x": 0,
             "font": {"size": 10, "color": COLORS["navy"]},
+            "bgcolor": "rgba(255,255,255,0)",
         },
         showlegend=show_legend,
         font={"family": "Inter, Segoe UI, sans-serif", "color": COLORS["navy"]},
@@ -4099,15 +4181,31 @@ def apply_command_center_chart_layout(
         linecolor="rgba(148, 163, 184, 0.55)",
         tickfont={"size": 11, "color": COLORS["slate"]},
         rangeslider={"visible": False},
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
     )
+
     fig.update_yaxes(
         title_text=yaxis_title,
         gridcolor="rgba(148, 163, 184, 0.22)",
         zerolinecolor="rgba(100, 116, 139, 0.35)",
         tickfont={"size": 11, "color": COLORS["slate"]},
         title_font={"size": 12, "color": COLORS["slate"]},
+        automargin=True,
+        title_standoff=16,
+        ticklabeloverflow="allow",
     )
-    return fig
+
+    return apply_plotly_label_safety(
+        fig,
+        left=88,
+        right=118,
+        top=84,
+        bottom=bottom_margin,
+        legend_bottom=show_legend and legend_bottom,
+        legend_y=-0.22,
+    )
 
 
 def calculate_module2_intelligence(
@@ -4870,10 +4968,30 @@ def create_module3_pressure_relief_strip(df: pd.DataFrame, intelligence: dict[st
         x=heat_df["date"], y=["Flow Signal"] * len(heat_df), z=[heat_df["signal"]],
         colorscale=[[0.0, COLORS["teal"]], [0.49, COLORS["teal"]], [0.50, COLORS["slate_light"]], [0.51, COLORS["orange"]], [1.0, COLORS["red"]]],
         showscale=True,
-        colorbar={"title": "Signal", "tickvals": [-1, 0, 1], "ticktext": ["Relief", "Balanced", "Pressure"]},
+        colorbar={
+            "title": {"text": "Signal", "side": "top"},
+            "tickvals": [-1, 0, 1],
+            "ticktext": ["Relief", "Balanced", "Pressure"],
+            "thickness": 14,
+            "len": 0.72,
+            "x": 1.04,
+            "xanchor": "left",
+            "tickfont": {"size": 10, "color": COLORS["navy"]},
+        },
         hovertemplate="%{x|%b %d, %Y}<br>Signal: %{z}<extra></extra>",
     ))
-    return apply_command_center_chart_layout(fig, title="Pressure and Relief Window Strip", height=280, show_legend=False)
+    fig = apply_command_center_chart_layout(
+        fig,
+        title="Pressure and Relief Window Strip",
+        height=300,
+        show_legend=False,
+    )
+
+    fig.update_layout(
+    margin={"l": 92, "r": 150, "t": 84, "b": 92},
+    )
+
+    return fig
 
 
 def create_module4_kpi_health_ranking(intelligence: dict[str, Any]) -> go.Figure:
@@ -4889,14 +5007,70 @@ def create_module4_kpi_health_ranking(intelligence: dict[str, Any]) -> go.Figure
 
 
 def create_module4_pressure_distribution(df: pd.DataFrame) -> go.Figure:
-    """Create Module 4 pressure distribution donut."""
+    """Create Module 4 pressure distribution donut with readable legend and percentages."""
     if df.empty or "final_pressure_stress_level" not in df.columns:
         return empty_figure("Pressure distribution is unavailable because required columns are missing.")
-    distribution = df["final_pressure_stress_level"].fillna("Unclassified").astype(str).value_counts().reset_index()
+
+    distribution = (
+        df["final_pressure_stress_level"]
+        .fillna("Unclassified")
+        .astype(str)
+        .value_counts()
+        .reset_index()
+    )
     distribution.columns = ["Pressure Level", "Periods"]
+
     colors = [pressure_level_color(level) for level in distribution["Pressure Level"]]
-    fig = go.Figure(data=[go.Pie(labels=distribution["Pressure Level"], values=distribution["Periods"], hole=0.58, marker={"colors": colors}, textinfo="label+percent", hovertemplate="%{label}<br>Periods: %{value:,.0f}<br>Share: %{percent}<extra></extra>")])
-    return apply_command_center_chart_layout(fig, title="Pressure Stress Distribution", height=390, show_legend=False)
+
+    fig = go.Figure(
+        data=[
+            go.Pie(
+                labels=distribution["Pressure Level"],
+                values=distribution["Periods"],
+                hole=0.58,
+                marker={
+                    "colors": colors,
+                    "line": {"color": "rgba(255,255,255,0.92)", "width": 2},
+                },
+                textinfo="percent",
+                textposition="inside",
+                insidetextorientation="radial",
+                textfont={"size": 12, "color": "#ffffff"},
+                hovertemplate=(
+                    "%{label}<br>"
+                    "Periods: %{value:,.0f}<br>"
+                    "Share: %{percent}"
+                    "<extra></extra>"
+                ),
+                sort=False,
+            )
+        ]
+    )
+
+    fig = apply_command_center_chart_layout(
+        fig,
+        title="Pressure Stress Distribution",
+        height=430,
+        show_legend=True,
+        legend_bottom=True,
+    )
+
+    fig.update_layout(
+        margin={"l": 48, "r": 48, "t": 84, "b": 128},
+        legend={
+            "orientation": "h",
+            "yanchor": "top",
+            "y": -0.18,
+            "xanchor": "center",
+            "x": 0.5,
+            "font": {"size": 10, "color": COLORS["navy"]},
+            "bgcolor": "rgba(255,255,255,0)",
+        },
+        uniformtext_minsize=10,
+        uniformtext_mode="show",
+    )
+
+    return fig
 
 
 def create_module4_driver_distribution(df: pd.DataFrame) -> go.Figure:

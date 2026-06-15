@@ -1,7 +1,5 @@
 # ============================================================
 # System Capacity & Care Load Analytics for Unaccompanied Children
-# Production-Ready Streamlit + Plotly Healthcare Analytics Dashboard
-# Phase 1: Complete app.py Replacement
 # ============================================================
 
 from __future__ import annotations
@@ -1832,7 +1830,6 @@ def pressure_level_color(level: Any) -> str:
 # ============================================================
 # 9. Plotly Visualizations — Module 1
 # System Load Overview Command Center Visual Functions
-# Patch 2: Dynamic Visual Function Upgrade
 # ============================================================
 
 def get_module1_intelligence_value(
@@ -3470,7 +3467,7 @@ def create_selected_metric_trend(df: pd.DataFrame, selected_metrics: list[str]) 
     
 # ============================================================
 # Module 1 — Stable Hybrid Rendering Layer
-# Phase 1: Renderer Stabilization
+# Renderer Stabilization
 # ============================================================
 
 def hhs_escape_html(value: Any) -> str:
@@ -4054,11 +4051,8 @@ def render_module_1_command_center(
             severity=severity,
         )
 
-
-
 # ============================================================
-# Module 2–4 — Production Command Center Intelligence Layer
-# Safe Mode: Scoped upgrade only for modules 2, 3, and 4
+# Renderer Stabilization and Utility Functions
 # ============================================================
 
 def hhs_safe_class_token(value: Any, default: str = "neutral") -> str:
@@ -4370,7 +4364,6 @@ def calculate_module2_intelligence(
         },
         "recommendations": recommendations,
     }
-
 
 def calculate_module3_intelligence(
     df_visual: pd.DataFrame,
@@ -4712,7 +4705,6 @@ def calculate_module4_intelligence(
         },
         "recommendations": recommendations,
     }
-
 
 def render_module_command_header(
     prefix: str,
